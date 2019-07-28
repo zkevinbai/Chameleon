@@ -3,13 +3,28 @@
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 25px 1fr 1fr 25px;
+  grid-template-columns: 25px repeat(2, 1fr) 25px;
   grid-template-rows: 25px 1fr 25px;
 }
 
 .colors {
   grid-column: 2;
   grid-row: 2;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.color-components {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr
+}
+
+.color-text {
+  color: white;
+  background: black;
 }
 
 .input {
