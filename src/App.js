@@ -18,30 +18,40 @@ export default class App extends React.Component {
         <div className="colors">
           <div className="color-components">
             <div 
-              className="color-r"
+              className="color-r color-component"
               style={{ 'background-color': `rgb(${this.state.colorR}, 0, 0)` }}
             >
-              Red: {this.state.colorR}
+              <span className="color-text">
+                Red: {this.state.colorR}
+              </span>
             </div>
+
             <div 
-              className="color-g"
+              className="color-g color-component"
               style={{ 'background-color': `rgb(0, ${this.state.colorG}, 0)` }}
             >
-              Green: {this.state.colorG}
+              <span className="color-text">
+                Green: {this.state.colorG}
+              </span>
             </div>
+
             <div 
-              className="color-b"
+              className="color-b color-component"
               style={{ 'background-color': `rgb(0, 0, ${this.state.colorB})` }}
             >
-              Blue: {this.state.colorB}
+              <span className="color-text">
+                Blue: {this.state.colorB}
+              </span>
             </div>
           </div>
 
           <div
-            className="color-rgbb"
+            className="color-rgb color-component"
             style={{ 'background-color': `rgb(${this.state.colorR}, ${this.state.colorG}, ${this.state.colorB})` }}
           >
-            RGB
+            <span className="color-text">
+              RGB: {this.state.colorR}, {this.state.colorG}, {this.state.colorB}
+            </span>
           </div>
         </div>
         <div className="input">

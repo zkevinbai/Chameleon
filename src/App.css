@@ -22,6 +22,10 @@
   grid-template-rows: 1fr
 }
 
+.color-component {
+  text-align: center;
+}
+
 .color-text {
   color: white;
   background: black;
