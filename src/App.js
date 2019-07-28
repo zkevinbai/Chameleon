@@ -6,10 +6,17 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      colorR: "100",
-      colorG: "100",
-      colorB: "100",
+      colorR: "150",
+      colorG: "150",
+      colorB: "150",
     }
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e){
+    let change = {}
+    change[e.target.name] = e.target.value
+    this.setState(change)
   }
 
   render() {
@@ -19,7 +26,7 @@ export default class App extends React.Component {
           <div className="color-components">
             <div 
               className="color-r color-component"
-              style={{ 'background-color': `rgb(${this.state.colorR}, 0, 0)` }}
+              style={{ 'backgroundColor': `rgb(${this.state.colorR}, 0, 0)` }}
             >
               <span className="color-text">
                 Red: {this.state.colorR}
@@ -28,7 +35,7 @@ export default class App extends React.Component {
 
             <div 
               className="color-g color-component"
-              style={{ 'background-color': `rgb(0, ${this.state.colorG}, 0)` }}
+              style={{ 'backgroundColor': `rgb(0, ${this.state.colorG}, 0)` }}
             >
               <span className="color-text">
                 Green: {this.state.colorG}
@@ -37,7 +44,7 @@ export default class App extends React.Component {
 
             <div 
               className="color-b color-component"
-              style={{ 'background-color': `rgb(0, 0, ${this.state.colorB})` }}
+              style={{ 'backgroundColor': `rgb(0, 0, ${this.state.colorB})` }}
             >
               <span className="color-text">
                 Blue: {this.state.colorB}
@@ -47,7 +54,7 @@ export default class App extends React.Component {
 
           <div
             className="color-rgb color-component"
-            style={{ 'background-color': `rgb(${this.state.colorR}, ${this.state.colorG}, ${this.state.colorB})` }}
+            style={{ 'backgroundColor': `rgb(${this.state.colorR}, ${this.state.colorG}, ${this.state.colorB})` }}
           >
             <span className="color-text">
               RGB: {this.state.colorR}, {this.state.colorG}, {this.state.colorB}
@@ -55,7 +62,26 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className="input">
-          Input
+          <div className="rgb-inputs">
+            R: <input 
+                type="text" 
+                name="colorR"
+                value={this.state.colorR}
+                onChange={this.handleChange}
+                ></input>
+            G: <input 
+                type="text" 
+                name="colorG"
+                value={this.state.colorG}
+                onChange={this.handleChange}
+                ></input>
+            B: <input 
+                type="text" 
+                name="colorB"
+                value={this.state.colorB}
+                onChange={this.handleChange}
+                ></input>
+          </div>
         </div>
       </div>
     )
