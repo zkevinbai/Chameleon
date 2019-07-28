@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Chameleon/static/css/main.39fcc386.chunk.css",
+    "main.js": "/Chameleon/static/js/main.8cdeb102.chunk.js",
+    "main.js.map": "/Chameleon/static/js/main.8cdeb102.chunk.js.map",
+    "runtime~main.js": "/Chameleon/static/js/runtime~main.777bb1d2.js",
+    "runtime~main.js.map": "/Chameleon/static/js/runtime~main.777bb1d2.js.map",
+    "static/js/2.4e81ba5b.chunk.js": "/Chameleon/static/js/2.4e81ba5b.chunk.js",
+    "static/js/2.4e81ba5b.chunk.js.map": "/Chameleon/static/js/2.4e81ba5b.chunk.js.map",
+    "index.html": "/Chameleon/index.html",
+    "precache-manifest.d32b592cfbb168eb237bb58b8e41522e.js": "/Chameleon/precache-manifest.d32b592cfbb168eb237bb58b8e41522e.js",
+    "service-worker.js": "/Chameleon/service-worker.js",
+    "static/css/main.39fcc386.chunk.css.map": "/Chameleon/static/css/main.39fcc386.chunk.css.map"
+  }
+}
