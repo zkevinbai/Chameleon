@@ -14,8 +14,11 @@ export default class App extends React.Component {
   }
 
   handleChange(e){
-    let change = {}
-    change[e.target.name] = e.target.value
+    const name = e.target.name;
+    const value = e.target.value;
+    const change = {}
+
+    change[name] = value
     this.setState(change)
   }
 
@@ -62,25 +65,61 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className="input">
-          <div className="rgb-inputs">
-            R: <input 
-                type="text" 
-                name="colorR"
-                value={this.state.colorR}
-                onChange={this.handleChange}
+          <div className="input-rgb">
+            <div className="input-r input-color">
+              R: <input 
+                  type="text" 
+                  name="colorR"
+                  value={this.state.colorR}
+                  onChange={this.handleChange}
+                  ></input>
+
+                  <input
+                  type="range" 
+                  min="0" 
+                  max="255"
+                  name="colorR"
+                  value={this.state.colorR}
+                  onChange={this.handleChange}
+                  ></input>
+            </div>
+
+            <div className="input-g input-color">
+              G: <input 
+                  type="text" 
+                  name="colorG"
+                  value={this.state.colorG}
+                  onChange={this.handleChange}
+                  ></input>
+
+                <input
+                  type="range"
+                  min="0"
+                  max="255"
+                  name="colorG"
+                  value={this.state.colorG}
+                  onChange={this.handleChange}
                 ></input>
-            G: <input 
-                type="text" 
-                name="colorG"
-                value={this.state.colorG}
-                onChange={this.handleChange}
+            </div>
+
+            <div className="input-b input-color">
+              B: <input 
+                  type="text" 
+                  name="colorB"
+                  value={this.state.colorB}
+                  onChange={this.handleChange}
+                  ></input>
+
+                <input
+                  type="range"
+                  min="0"
+                  max="255"
+                  name="colorB"
+                  value={this.state.colorB}
+                  onChange={this.handleChange}
                 ></input>
-            B: <input 
-                type="text" 
-                name="colorB"
-                value={this.state.colorB}
-                onChange={this.handleChange}
-                ></input>
+            </div>
+
           </div>
         </div>
       </div>
