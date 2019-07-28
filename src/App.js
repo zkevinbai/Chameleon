@@ -6,7 +6,21 @@ export default class App extends React.Component {
     return (
       <div className="app">
         <div className="colors">
-          Colors
+          <div className="color-components">
+            <div className="color-r">
+              Red
+            </div>
+            <div className="color-g">
+              Green
+            </div>
+            <div className="color-b">
+              Blue
+            </div>
+          </div>
+
+          <div className="color-rgb">
+            RGB
+          </div>
         </div>
         <div className="input">
           Input
